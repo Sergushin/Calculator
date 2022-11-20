@@ -1,0 +1,46 @@
+@import '../../../styles/variables';
+
+.categories {
+    display: flex;
+    gap: 10px;
+
+    >button {
+        text-align: start;
+        padding:0.8em ;
+        height: 8rem;
+        width: 10rem;
+        background-color: $gray;
+        font-size: 1.4rem;
+        border-radius: 25px;
+        transition: all 0.5s ease;
+        >span {
+            display: block;
+            position: relative;
+            top: 3rem;
+            color: #727699;
+            transition: all 0.5s ease;
+        }
+        &:hover{
+            background-color: $accent;
+            box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px;
+            width: 10.7rem;
+            height: 8.7rem;
+            >span{
+                color: white;
+                font-size: 1.8rem;
+            }
+        }
+        
+    }
+    >.active {
+        background-color: $accent;
+        box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px;
+        width: 10.7rem;
+        height: 8.7rem;
+        >span{
+            color: white;
+            font-size: 1.8rem;
+        }
+    }
+    
+}

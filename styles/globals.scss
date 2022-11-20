@@ -1,0 +1,73 @@
+@import '/styles/variables';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins',sans-serif;
+  background-color: #8B94EE;
+  color: white;
+  
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+button{
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+body{
+  width: 30rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 60px;
+    background:linear-gradient(rgba(255, 255, 255, 0.01), rgba(0, 0, 0, 0.94)),url('../public/Images/bg-purple.jpeg');
+    background-color: $black;
+    padding: 5em 20px;
+    background-repeat: no-repeat;
+    background-size: 100em auto;
+    transition: all 0.6 ease;
+}
+
+
+.MuiSlider-root .MuiSlider-thumb {
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 40%, rgba(86,74,224,1) 50%);
+
+}
+.MuiSlider-root .MuiSlider-track {
+  background: $accent;
+  border: none;
+  color: #8B94EE;
+
+}
+.MuiSlider-root .MuiSlider-rail{
+  background: $gray;
+}
+
+.MuiTypography-root {
+  color: white;
+}
+
+
+
