@@ -1,10 +1,10 @@
 import styles from "./Header.module.scss";
-const Header = () => {
+const Header = ({children,title}) => {
     return (
         <div className={styles.header}>
             <div>
-                <span >Calculate your Mortgage</span>
-                <span className={styles.type}>Loan type</span>
+                <span>{children}</span>
+                <span className={styles.type}>{title}</span>
             </div>
 
         </div>

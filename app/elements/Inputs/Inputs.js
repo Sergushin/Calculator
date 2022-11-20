@@ -1,6 +1,10 @@
-import { InputAdornment, OutlinedInput, TextField, Slider } from '@mui/material';
+import { Slider} from '@mui/material';
 import styles from './Inputs.module.scss';
 import { useState } from 'react';
+import { AttachMoney } from '@mui/icons-material';
+import Link from 'next/link';
+
+
 
 
 
@@ -14,21 +18,18 @@ const Inputs = () => {
         setValues(e.target.value);
     }
     const [inputValue, setInputValue] = useState(0)
+    let regex = /[a-z!$(){}[[:;-<+?.,';>e/\\]/g;
     const handleChangess = e => {
-        setInputValue(e.target.value);
+        setInputValue(e.target.value.replace(regex,''))
     }
+    const total=Number(inputValue)+value+value1
+
     return (
         <div className={styles.inputs}>
             <div className="text-input">
                 <label htmlFor="loan">Loan Amount</label>
-                <OutlinedInput
-                    type='number'
-                    className={styles.input}
-                    startAdornment={<InputAdornment position="start">$</InputAdornment>}
-                    value={inputValue}
-                    onChange={handleChangess}
-                    label="Amount"
-                />
+                <AttachMoney className={styles.money}/>
+                <input type="text" maxLength={9} onChange={handleChangess} value={inputValue} in placeholder='999.999.999' />
             </div>
             <div className="">
                 <label htmlFor="loan">Interest rate <span>- Procent</span></label>
@@ -40,6 +41,15 @@ const Inputs = () => {
                 <Slider value={value} onChange={handleChange} aria-label="loan" />
                 <span>{value} Years</span>
             </div>
+            <Link className={styles.link}
+        href={{
+          pathname: "/calculate",
+          query:{total}
+        }}
+        
+      >
+        Calculate
+      </Link>
         </div>
     );
 }

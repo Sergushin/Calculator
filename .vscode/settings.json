@@ -1,0 +1,36 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        ".vscode": true,
+        ".next": true,
+        "node_modules": true,
+        ".eslintrc.json": true,
+        ".gitignore": true,
+        "next.config.js": true,
+        "package.json": true,
+        "project.webp": true,
+        "README.md": true,
+        "yarn.lock": true,
+        ".git": true,
+        ".git/COMMIT_EDITMSG": true
+    },
+    "hide-files.files": [
+        ".vscode",
+        ".next",
+        "node_modules",
+        ".eslintrc.json",
+        ".gitignore",
+        "next.config.js",
+        "package.json",
+        "project.webp",
+        "README.md",
+        "yarn.lock",
+        ".git",
+        ".git/COMMIT_EDITMSG"
+    ]
+}
